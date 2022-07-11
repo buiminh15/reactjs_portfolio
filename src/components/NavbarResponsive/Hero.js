@@ -14,20 +14,20 @@ function FormAuth() {
     <div className="bg-[#f8f8f8] rounded w-full text-[#808080]">
       <div className="p-10">
         <p className="text-xs">Sign in with</p>
-        <div className="flex items-center mt-3 cursor-pointer">
-          <div className="flex-1 flex py-2 items-center justify-center border border-[#808080] rounded">
+        <div className="grid grid-cols-3 mt-3 cursor-pointer border border-[#808080] rounded divide-x divide-[#808080]">
+          <div className="py-2 grid place-items-center ">
             <IconWrapper
               element={<FaFacebook />}
               styleProvider={{ size: 20, className: "text-[#333]" }}
             />{" "}
           </div>
-          <div className="flex-1 flex py-2 items-center justify-center border border-[#808080] rounded">
+          <div className="py-2 grid place-items-center ">
             <IconWrapper
               element={<FaTwitter />}
               styleProvider={{ size: 20, className: "text-[#333]" }}
             />
           </div>
-          <div className="flex-1 flex py-2 items-center justify-center border border-[#808080] rounded">
+          <div className="py-2 grid place-items-center ">
             <IconWrapper
               element={<FaGithub />}
               styleProvider={{ size: 20, className: "text-[#333]" }}
