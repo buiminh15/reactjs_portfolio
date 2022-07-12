@@ -1,5 +1,4 @@
 import React from "react";
-import { WorkImage } from "../utils/images";
 import { worksData } from "../utils/data";
 import { Link } from "react-router-dom";
 

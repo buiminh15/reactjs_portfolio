@@ -6,14 +6,14 @@ const worksData = [
     src: WORKS_IMG.DATA_RES,
     tech: ["React Js", "TailwindCss"],
     linkWeb: "navbar-responsive",
-    linkGithub: "https://www.patterns.dev/posts/client-side-rendering/",
+    linkGithub: "https://github.com/buiminh15/reactjs_portfolio",
   },
   {
     id: 2,
     src: WORKS_IMG.GALAXY,
     tech: ["React Js", "TailwindCss"],
     linkWeb: "galaxy",
-    linkGithub: "https://www.patterns.dev/posts/client-side-rendering/",
+    linkGithub: "https://github.com/buiminh15/reactjs_portfolio",
   },
 ];
 
