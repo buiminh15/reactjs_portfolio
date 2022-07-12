@@ -41,7 +41,7 @@ function PricingCard({item}) {
       <h3 className=' text-xl'>- {item.info2} -</h3>
       <h3 className=' text-xl'>- {item.info3} -</h3>
       <h3 className=' text-xl'>- {item.info4} -</h3>
-      <Link to='galaxy/contact' className='border border-white text-center uppercase py-4 w-3/4 cursor-pointer hover:bg-[#252525]'>
+      <Link to='../contact' className='border border-white text-center uppercase py-4 w-3/4 cursor-pointer hover:bg-[#252525]'>
         book
       </Link>
     </div>

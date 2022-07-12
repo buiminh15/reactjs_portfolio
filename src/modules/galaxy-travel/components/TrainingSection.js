@@ -13,7 +13,7 @@ function TrainingSection() {
             all inclusive training for pre-flight and in-flight scenarios.
           </p>
           <Link
-            to="galaxy/contact"
+            to="../contact"
             className="uppercase border border-white py-3 px-6 text-xl "
           >
             contact
