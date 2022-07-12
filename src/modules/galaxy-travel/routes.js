@@ -1,5 +1,11 @@
+import React from "react";
 import Layout from "./components/Layout";
 import { Contact, Home, Pricing, Training } from "./pages";
+
+const HomeLazy = React.lazy(() => import('./pages/Home'))
+const TrainingLazy = React.lazy(() => import('./pages/Training'))
+const ContactLazy = React.lazy(() => import('./pages/Contact'))
+const PricingLazy = React.lazy(() => import('./pages/Pricing'))
 
 const galaxyRouteConfig = [
   {
@@ -8,19 +14,19 @@ const galaxyRouteConfig = [
     children: [
       {
         path: "",
-        element: <Home />,
+        element: <HomeLazy />,
       },
       {
         path: "training",
-        element: <Training />,
+        element: <TrainingLazy />,
       },
       {
         path: "contact",
-        element: <Contact />,
+        element: <ContactLazy />,
       },
       {
         path: "Pricing",
-        element: <Pricing />,
+        element: <PricingLazy />,
       },
     ],
   },
