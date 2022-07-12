@@ -19,6 +19,7 @@ import Mongo from '../assets/portfolio/images/mongo.png';
 import WorkImage from '../assets/portfolio/images/workImg.jpeg';
 import WorkDataRes from '../assets/portfolio/images/data-responsive.PNG';
 import WorkGalaxyTravel from '../assets/portfolio/images/galaxy-travel.PNG';
+import WorkNetflix from '../assets/portfolio/images/netflix-clone.PNG';
 
 
 const skillsData = [
@@ -67,6 +68,7 @@ const skillsData = [
 const WORKS_IMG = {
   DATA_RES: WorkDataRes,
   GALAXY: WorkGalaxyTravel,
+  NETFLIX: WorkNetflix,
 }
 
 export { Logo, GalaxyHeroImg, GalaxyMoon, GalaxyPod, GalaxySpaceVideo, skillsData, WorkImage, WORKS_IMG };

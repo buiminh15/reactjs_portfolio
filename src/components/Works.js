@@ -2,7 +2,7 @@ import React from "react";
 import { worksData } from "../utils/data";
 import { Link } from "react-router-dom";
 
-function WorkCard({ src, tech, linkWeb, linkGithub }) {
+function WorkCard({ src, tech, linkWeb, linkGithub, externalLink }) {
   return (
     <div className="shadow-lg shadow-[#040c16] group container rounded-md flex flex-col mx-auto content-div min-h-[300px]">
       <img
@@ -21,18 +21,29 @@ function WorkCard({ src, tech, linkWeb, linkGithub }) {
         </ul>
         <div className="absolute bottom-5 left-0 w-full">
           <div className="w-full flex items-center justify-center gap-4">
-            <Link
-              to={linkWeb}
-              className="border border-white px-4 py-2 hover:bg-[#db2777] hover:border-[#db2777]"
-            >
-              Demo
-            </Link>
-            <Link
-              to={linkGithub}
+            {externalLink ? (
+              <a
+                href={linkWeb}
+                target="_blank"
+                className="border border-white px-4 py-2 hover:bg-[#db2777] hover:border-[#db2777]"
+              >
+                Demo
+              </a>
+            ) : (
+              <Link
+                to={linkWeb}
+                className="border border-white px-4 py-2 hover:bg-[#db2777] hover:border-[#db2777]"
+              >
+                Demo
+              </Link>
+            )}
+            <a
+              href={linkGithub}
+              target="_blank"
               className="border border-white px-4 py-2 hover:bg-[#db2777] hover:border-[#db2777]"
             >
               Github
-            </Link>
+            </a>
           </div>
         </div>
       </div>
@@ -62,6 +73,7 @@ function Works() {
               linkWeb={item.linkWeb}
               src={item.src}
               tech={item.tech}
+              externalLink={item?.external}
             />
           ))}
         </div>
