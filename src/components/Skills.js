@@ -17,11 +17,10 @@ function Skills() {
       className="w-full h-screen bg-[#0a192f] text-white px-4"
     >
       <div className="h-full flex flex-col justify-center items-start">
-        <div className="grid grid-cols-1 sm:grid-cols-2 sm:max-w-[1000px] sm:mx-auto gap-6 mt-8">
-          <h2 className="text-4xl font-bold border-b-4 border-[#db2777] ">
+      <div className="grid grid-cols-1 sm:w-[1000px] sm:mx-auto gap-6 mt-8">
+          <h2 className="text-4xl font-bold border-b-4 border-[#db2777] max-w-max">
             Skills
           </h2>
-          <div></div>
         </div>
 
         <div className="w-full text-center grid grid-cols-2 sm:grid-cols-4 sm:max-w-[1000px] sm:mx-auto gap-4 mt-8">
