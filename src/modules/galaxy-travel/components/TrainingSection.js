@@ -24,6 +24,7 @@ function TrainingSection() {
           <div className="grid grid-cols-8 ">
             <div className="col-start-2 col-end-6 row-start-1 row-end-1 z-[6] pt-[20%]">
               <img
+                loading="lazy"
                 src={GalaxyMoon}
                 alt="moon"
                 className=" border border-[#333] "
@@ -31,6 +32,7 @@ function TrainingSection() {
             </div>
             <div className="col-start-4 col-end-8 row-start-1 row-end-1 z-[5]">
               <img
+                loading="lazy"
                 src={GalaxyPod}
                 alt="pod"
                 className=" border border-[#333] "

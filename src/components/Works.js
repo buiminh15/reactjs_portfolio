@@ -2,14 +2,25 @@ import React from "react";
 import { worksData } from "../utils/data";
 import { Link } from "react-router-dom";
 
-function WorkCard({ src, tech, linkWeb, linkGithub, externalLink }) {
+function WorkCard({ src, tech, linkWeb, linkGithub, externalLink, desc }) {
   return (
-    <div className="shadow-lg shadow-[#040c16] group container rounded-md flex flex-col mx-auto content-div min-h-[300px]">
-      <img
-        src={src}
-        alt="work image"
-        className="max-h-[120px] w-full object-cover rounded-t-md"
-      />
+    <div className="shadow-lg shadow-[#040c16] group container rounded-md flex flex-col mx-auto content-div min-h-[340px]">
+      <div className="relative cursor-pointer">
+        <img
+          loading="lazy"
+          src={src}
+          alt="work image"
+          className="max-h-[140px] w-full object-cover rounded-t-md"
+        />
+
+        <div className="opacity-0 group-hover:opacity-100 absolute top-0 left-0 bg-black/[.5] w-full h-full p-3 text-[#f8f8f8]">
+          <span className="font-bold tracking-wider">
+            Description:
+          </span>
+          <p>{desc}</p>
+        </div>
+      </div>
+
       <div className="px-4 pt-3 h-full relative">
         <h3 className="font-semibold">Tech Stack</h3>
         <ul className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-2">
@@ -57,7 +68,7 @@ function Works() {
       name="work"
       className="w-full h-screen bg-[#0a192f] text-white px-4"
     >
-      <div className="h-full flex flex-col justify-center items-start"> 
+      <div className="h-full flex flex-col justify-center items-start">
         <div className="grid grid-cols-1 sm:w-[1000px] sm:mx-auto gap-6 mt-8">
           <h2 className="text-4xl font-bold border-b-4 border-[#db2777] max-w-max">
             Work
@@ -73,6 +84,7 @@ function Works() {
               src={item.src}
               tech={item.tech}
               externalLink={item?.external}
+              desc={item.desc}
             />
           ))}
         </div>

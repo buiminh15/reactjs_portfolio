@@ -21,7 +21,6 @@ function ContactItem({ element, children }) {
 function Footer() {
   let location = useLocation();
   const [bgBlack, setBgBlack] = useState(false);
-  console.log(location)
   useEffect(() => {
     if(location.pathname !== '/galaxy') {
       setBgBlack(true)

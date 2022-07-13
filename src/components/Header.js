@@ -5,10 +5,6 @@ import { Link as LinkScroll } from "react-scroll";
 import {
   FaBars,
   FaTimes,
-  FaGithub,
-  FaLinkedin,
-  FaFacebook,
-  FaLinkedinIn,
 } from "react-icons/fa";
 import { IconWrapper } from "./common";
 
@@ -38,7 +34,7 @@ function Header() {
   const [click, setClick] = useState(false);
 
   return (
-    <header className="w-full fixed top-0 left-0 bg-[#0a192f] text-gray-300 px-4">
+    <header className="w-full fixed top-0 left-0 bg-[#0a192f] text-gray-300 px-8">
       <div className="h-[80px] flex items-center justify-between">
         <Link to="/" className=" text-2xl font-semibold">
           Minh<span className="text-[#db2777]">.dev</span>
