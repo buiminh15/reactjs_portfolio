@@ -1,6 +1,7 @@
 import { useRoutes } from "react-router-dom";
 import { galaxyRouteConfig } from "./modules/galaxy-travel/routes";
 import { routesNavbarResponsiveConfig } from "./modules/navbar-responsive/routes";
+import { twitterRouteConfig } from "./modules/twitter-clone/routes";
 import { Home } from "./pages";
 
 const mainRoutes = [
@@ -10,6 +11,7 @@ const mainRoutes = [
   },
   ...routesNavbarResponsiveConfig,
   ...galaxyRouteConfig,
+  ...twitterRouteConfig,
 ]
 
 function App() {

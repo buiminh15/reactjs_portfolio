@@ -26,6 +26,14 @@ const worksData = [
     external: true,
     desc: 'I code this project to learn how nextjs working'
   },
+  {
+    id: 4,
+    src: WORKS_IMG.GALAXY,
+    tech: ["React Js", "TailwindCss"],
+    linkWeb: "twitter-clone",
+    linkGithub: "https://github.com/buiminh15/reactjs_portfolio/tree/master/src/modules/galaxy-travel",
+    desc: 'I code this project to learn grid, react-scroll and image optimization of webpack'
+  },
 ];
 
 export { worksData };

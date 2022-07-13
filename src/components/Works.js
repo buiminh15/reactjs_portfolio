@@ -36,6 +36,7 @@ function WorkCard({ src, tech, linkWeb, linkGithub, externalLink, desc }) {
               <a
                 href={linkWeb}
                 target="_blank"
+                rel="noreferrer"
                 className="border border-white px-4 py-2 hover:bg-[#db2777] hover:border-[#db2777]"
               >
                 Demo
@@ -51,6 +52,7 @@ function WorkCard({ src, tech, linkWeb, linkGithub, externalLink, desc }) {
             <a
               href={linkGithub}
               target="_blank"
+              rel="noreferrer"
               className="border border-white px-4 py-2 hover:bg-[#db2777] hover:border-[#db2777]"
             >
               Github
@@ -66,7 +68,7 @@ function Works() {
   return (
     <section
       name="work"
-      className="w-full h-screen bg-[#0a192f] text-white px-4"
+      className="w-full min-h-screen bg-[#0a192f] text-white px-4 pb-10"
     >
       <div className="h-full flex flex-col justify-center items-start">
         <div className="grid grid-cols-1 sm:w-[1000px] sm:mx-auto gap-6 mt-8">
