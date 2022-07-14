@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { IconWrapper, TextBox } from "../../../components/common";
 import { AvatarIcon } from "../../../utils/images";
 import Avatar from "./Avatar";
@@ -16,6 +16,9 @@ import {
   BiUpload,
 } from "react-icons/bi";
 import { generateTwitterPosts } from "../../../utils/data";
+import { VariableSizeList as List } from 'react-window';
+
+
 
 const icons = [
   {
@@ -88,7 +91,7 @@ function Post({
   likesNum,
 }) {
   return (
-    <article className="grid grid-cols-[auto,1fr] gap-4 p-4">
+    <article className="grid grid-cols-[auto,1fr] gap-4 p-4 hover:bg-neutral-100 hover-transition">
       <Avatar src={src} alt="user avatar" />
       <div className="flex flex-col gap-3">
         {/* heading */}
@@ -101,12 +104,12 @@ function Post({
               {postedTime}
             </span>
           </div>
-          <div>
+          <div className="hover:bg-sky-50 p-2 hover-transition rounded-full">
             <IconWrapper
               element={<BiDotsHorizontalRounded />}
               styleProvider={{
                 size: 16,
-                className: "text-gray-600, cursor-pointer",
+                className: "text-gray-600 cursor-pointer ",
               }}
             />
           </div>
@@ -156,14 +159,26 @@ function Post({
 }
 
 function MainTweeting() {
+  const [postNum, setPostNum] = useState(10);
+  debugger;
   return (
     <section className="w-full min-h-screen ">
-      <div className="px-4 py-6 sticky top-0">
+      <div className="px-4 py-6 sticky top-0 bg-white shadow-sm flex items-center justify-between">
         <h2 className="font-bold text-xl ">Home</h2>
+        <div className="">
+          <span className="text-red-500 text-xs">Number of posts (max 1000)</span>
+          <TextBox
+            placeholder="Please enter of post's number"
+            styleInput="outline-none border border-[#c4c4c4] rounded px-4 py-2 text-base tracking-wide"
+            type="number"
+            value={postNum}
+            handleChange={(e) => setPostNum(Number(e.target.value))}
+          />
+        </div>
       </div>
       <TweetPosting />
       <ul>
-        {generateTwitterPosts(20).map((item) => (
+        {generateTwitterPosts(postNum).map((item) => (
           <li className="border-b-[0.1px]" key={`post-id-${item.id}`}>
             <Post
               src={item.avatar}
