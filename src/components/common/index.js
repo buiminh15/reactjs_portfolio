@@ -1,3 +1,4 @@
 import IconWrapper from "./IconWrapper";
+import TextBox from "./TextBox";
 
-export { IconWrapper };
+export { IconWrapper, TextBox };
