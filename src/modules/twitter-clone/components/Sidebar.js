@@ -112,7 +112,7 @@ function Me({ name, nickname }) {
 function Sidebar() {
   const [active, setActive] = useState(0);
   return (
-    <aside className="hidden sm:flex flex-col items-center xl:items-start justify-between gap-5 px-2 py-4 min-h-screen text-[#1e293b]">
+    <aside className="hidden md:flex flex-col items-center xl:items-start justify-between gap-5 px-2 py-4 h-screen text-[#1e293b]">
       <div className="flex flex-col gap-5 items-center xl:items-start w-full">
         <Link to="" className="w-full px-3 xl:px-6 grid place-items-center xl:block">
           <IconWrapper

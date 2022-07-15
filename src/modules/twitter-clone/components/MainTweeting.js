@@ -16,9 +16,7 @@ import {
   BiUpload,
 } from "react-icons/bi";
 import { generateTwitterPosts } from "../../../utils/data";
-import { VariableSizeList as List } from 'react-window';
-
-
+import InfiniteScroll from "react-infinite-scroll-component";
 
 const icons = [
   {
@@ -159,39 +157,41 @@ function Post({
 }
 
 function MainTweeting() {
-  const [postNum, setPostNum] = useState(10);
-  debugger;
+  const [listData, setListData] = useState(generateTwitterPosts(10));
+
+  const fetchMoreData = () => {
+    setListData(listData.concat(generateTwitterPosts(10)));
+  };
+
   return (
-    <section className="w-full min-h-screen ">
-      <div className="px-4 py-6 sticky top-0 bg-white shadow-sm flex items-center justify-between">
+    <section className="w-full min-h-screen">
+      <div className="px-4 py-6 sticky top-0 bg-white  flex items-center justify-between">
         <h2 className="font-bold text-xl ">Home</h2>
-        <div className="">
-          <span className="text-red-500 text-xs">Number of posts (max 1000)</span>
-          <TextBox
-            placeholder="Please enter of post's number"
-            styleInput="outline-none border border-[#c4c4c4] rounded px-4 py-2 text-base tracking-wide"
-            type="number"
-            value={postNum}
-            handleChange={(e) => setPostNum(Number(e.target.value))}
-          />
-        </div>
       </div>
       <TweetPosting />
+
       <ul>
-        {generateTwitterPosts(postNum).map((item) => (
-          <li className="border-b-[0.1px]" key={`post-id-${item.id}`}>
-            <Post
-              src={item.avatar}
-              name={item.name}
-              nickname={item.nickname}
-              postedTime={item.postedTime}
-              content={item.content}
-              replyNum={item.replyNum}
-              retweetNum={item.retweetNum}
-              likesNum={item.likesNum}
-            />
-          </li>
-        ))}
+        <InfiniteScroll
+          dataLength={listData.length}
+          next={fetchMoreData}
+          hasMore={true}
+          loader={<h4>Loading...</h4>}
+        >
+          {listData.map((item) => (
+            <li className="border-b-[0.1px]" key={`post-id-${item.id}`}>
+              <Post
+                src={item.avatar}
+                name={item.name}
+                nickname={item.nickname}
+                postedTime={item.postedTime}
+                content={item.content}
+                replyNum={item.replyNum}
+                retweetNum={item.retweetNum}
+                likesNum={item.likesNum}
+              />
+            </li>
+          ))}
+        </InfiniteScroll>
       </ul>
     </section>
   );

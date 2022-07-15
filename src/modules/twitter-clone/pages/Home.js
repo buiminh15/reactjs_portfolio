@@ -1,16 +1,15 @@
-import React from 'react'
-import { MainTweeting, Sidebar, Trends } from '../components'
+import React from "react";
+import { Layout, MainTweeting, Sidebar, Trends } from "../components";
 
 function Home() {
   return (
-    <div className='w-full min-h-screen'>
-      <div className="flex h-full">
-        <Sidebar />
+    <Layout>
+      <div className="border border-x-[0.1px] max-w-[37.5rem]">
         <MainTweeting />
-        <Trends />
       </div>
-    </div>
-  )
+      <Trends />
+    </Layout>
+  );
 }
 
-export default Home
+export default Home;
