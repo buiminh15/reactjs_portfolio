@@ -1,4 +1,5 @@
 import { WORKS_IMG } from "./images";
+import { faker } from "@faker-js/faker";
 
 const worksData = [
   {
@@ -93,8 +94,8 @@ function generateName() {
 
 function generateImage() {
   const ids = [0, 1, 10, 100, 1000, 1001, 1002, 1003, 1004, 1005, 1006, 1008];
-  const id = ids[Math.floor(Math.random()*ids.length)]
-  return `https://picsum.photos/id/${id}/200/300`
+  const id = ids[Math.floor(Math.random() * ids.length)];
+  return `https://picsum.photos/id/${id}/200/300`;
 }
 
 function generateTwitterPosts(num) {
@@ -114,4 +115,15 @@ function generateTwitterPosts(num) {
     }));
 }
 
-export { worksData, generateTwitterPosts };
+function generateTwitterTrends(num) {
+  return Array(num)
+    .fill(1)
+    .map((_) => ({
+      id: faker.datatype.uuid(),
+      trending_country: `Trending in ${faker.address.country()}`,
+      author: `${faker.name.findName()} ${faker.name.lastName()}`,
+      tweet_no: faker.datatype.number({ max: 100 }),
+    }));
+}
+
+export { worksData, generateTwitterPosts, generateTwitterTrends };

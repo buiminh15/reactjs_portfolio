@@ -89,7 +89,7 @@ function Post({
   likesNum,
 }) {
   return (
-    <article className="grid grid-cols-[auto,1fr] gap-4 p-4 hover:bg-neutral-100 hover-transition">
+    <article className="grid grid-cols-[auto,1fr] gap-4 p-4 hover:bg-neutral-50 hover-transition">
       <Avatar src={src} alt="user avatar" />
       <div className="flex flex-col gap-3">
         {/* heading */}
@@ -102,12 +102,12 @@ function Post({
               {postedTime}
             </span>
           </div>
-          <div className="hover:bg-sky-50 p-2 hover-transition rounded-full">
+          <div className="hover:bg-sky-100 p-2 hover-transition rounded-full">
             <IconWrapper
               element={<BiDotsHorizontalRounded />}
               styleProvider={{
                 size: 16,
-                className: "text-gray-600 cursor-pointer ",
+                className: "text-gray-600 cursor-pointer hover:text-sky-500",
               }}
             />
           </div>
