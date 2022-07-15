@@ -31,12 +31,12 @@ const worksData = [
   },
   {
     id: 4,
-    src: WORKS_IMG.GALAXY,
-    tech: ["React Js", "TailwindCss"],
+    src: WORKS_IMG.TWITTER,
+    tech: ["React Js", "TailwindCss", "react-infinite-scroll-component"],
     linkWeb: "twitter-clone",
     linkGithub:
-      "https://github.com/buiminh15/reactjs_portfolio/tree/master/src/modules/galaxy-travel",
-    desc: "I code this project to learn grid, react-scroll and image optimization of webpack",
+      "https://github.com/buiminh15/reactjs_portfolio/tree/master/src/modules/twitter-clone",
+    desc: "I code this project to learn grid, responsive and how to handle large list by using react-infinite-scroll-component ",
   },
 ];
 

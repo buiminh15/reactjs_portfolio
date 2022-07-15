@@ -19,6 +19,7 @@ import Mongo from "../assets/portfolio/images/mongo.png";
 import WorkImage from "../assets/portfolio/images/workImg.jpeg";
 import WorkDataRes from "../assets/portfolio/images/data-responsive.PNG";
 import WorkGalaxyTravel from "../assets/portfolio/images/galaxy-travel.PNG";
+import WorkTwitterClone from "../assets/portfolio/images/twitter.PNG";
 import WorkNetflix from "../assets/portfolio/images/netflix-clone.PNG";
 import AvatarIcon from "../assets/portfolio/images/avatar1.jpg";
 
@@ -69,6 +70,7 @@ const WORKS_IMG = {
   DATA_RES: WorkDataRes,
   GALAXY: WorkGalaxyTravel,
   NETFLIX: WorkNetflix,
+  TWITTER: WorkTwitterClone
 };
 
 export {
